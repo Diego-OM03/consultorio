@@ -1,0 +1,253 @@
+/* ================================
+   ESTILOS BASE
+================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Fondo con degradado elegante */
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #1a4469, #000000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   CONTENEDOR DEL FORMULARIO
+================================ */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1s ease forwards;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ================================
+   TÍTULO
+================================ */
+.container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ================================
+   FORMULARIO
+================================ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Etiquetas */
+label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.3rem;
+}
+
+/* Campos de texto */
+input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* ================================
+   CONTRASEÑA + OJO
+================================ */
+.password-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* mantiene el label a la izquierda */
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 2.5rem; /* deja espacio para el ojito */
+}
+
+.password-container i {
+  position: absolute;
+  right: 1rem;
+  top: 58%; /* antes estaba en 60% */
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.password-container i:hover {
+  color: #fff;
+}
+
+/* ================================
+   BOTÓN DE REGISTRO
+================================ */
+button {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.03);
+}
+
+/* ================================
+   ENLACE PARA LOGIN
+================================ */
+.login-link {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.login-link a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   RESPONSIVO
+================================ */
+@media (max-width: 480px) {
+  .container {
+    padding: 2rem;
+    border-radius: 15px;
+  }
+
+  .container h2 {
+    font-size: 1.4rem;
+  }
+
+  input {
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 0.8rem;
+  }
+}
+
+.divider {
+  margin: 1rem 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* === Botón de Google con estilo oficial === */
+.google-signin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 0.8rem;
+  background: #fff;
+  color: #3c4043;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #dadce0;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.3);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.google-signin-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.google-signin-btn span {
+  font-size: 0.95rem;
+}
+
+.google-signin-btn:hover {
+  background: #f8f9fa;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(60, 64, 67, 0.4);
+}

@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(0,0,0,0.6);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  color: #fff;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+input {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+}
+
+/* ================================
+   CONTRASEÑA + ÍCONO OJO
+================================ */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  padding-right: 2.5rem;
+}
+
+.password-container i {
+  position: absolute;
+  right: 1rem;
+  top: 60%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgba(18, 111, 250, 0.832);
+  transition: 0.3s;
+  font-size: 1.1rem;
+}
+
+.password-container i:hover {
+  color: #001dfad5;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  background: #2575fc;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #6a11cb;
+}
+
+.divider {
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: rgba(255,255,255,0.4);
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.google-signin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 0.8rem;
+  background: #fff;
+  color: #3c4043;
+  font-weight: 600;
+  border: 1px solid #dadce0;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.3);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-bottom: 1rem;
+}
+
+.google-signin-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.google-signin-btn span {
+  font-size: 0.95rem;
+}
+
+.google-signin-btn:hover {
+  background: #f8f9fa;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(60, 64, 67, 0.4);
+}
+/* ================================
+   MODO OSCURO AUTOMÁTICO
+================================ */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #1f1f1f, #323232);
+  }
+  .container {
+    background: rgba(40, 40, 40, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}
+
+.error-message {
+  color: #ff4d4f;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  min-height: 1.2rem;
+}
+

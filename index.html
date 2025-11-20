@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultorio Médico Privado</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="logo">Consultorio Medico <br> Dra. Claudia Susana Montero Northland</div>
+    <nav class="nav-links" id="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#contacto">Contacto</a>
+      <a href="Login/login.html" class="btn-login">Iniciar Sesión</a>
+      <a href="Registrar/registro.html" class="btn-register">Registrarse</a>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN PRINCIPAL -->
+  <section class="hero">
+    <h1>Bienvenido al Consultorio Médico Privado<br>Sagrado Corazón de Jesús</h1>
+    <p>Atención profesional, rápida y confiable. Agenda tus citas médicas en línea de forma sencilla.</p>
+    <a href="Login/login.html" class="btn-principal">Agenda tu primera cita</a>
+  </section>
+
+  <!-- SECCIONES INFORMATIVAS -->
+  <section id="servicios" class="info">
+    <h2>Servicios Médicos</h2>
+    <p>Atenion Particular a Domicilio</p>
+    <p>Atención general, control de salud, consultas especializadas y más.</p>
+  </section>
+
+  <section id="horarios" class="info">
+    <h2>Horarios de Atención</h2>
+    <p>Lunes a Viernes: 08:00 - 17:00<br>Sábados: 09:00 - 13:00</p>
+  </section>
+
+  <section id="contacto" class="info">
+  <h2>Contacto</h2>
+  <p>
+    📍 Dirección: Urb. Las Palmas Calle Tamarindo # E-23 - Ciudad Trinidad<br>
+    📞 +591 76888620        
+    <!-- Botón de WhatsApp al lado del teléfono -->
+    <a href="https://wa.me/59176888620" target="_blank" class="whatsapp-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24">
+    </a>
+    <br>
+    ✉️ monteronorthlandclaudiasusana@gmail.com
+  </p>
+
+  <!-- Mapa de Google -->
+  <div class="map-container">
+    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3932.969602831978!2d-64.90091392489012!3d-14.790119985719013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTTCsDQ3JzI0LjQiUyA2NMKwNTMnNTQuMCJX!5e1!3m2!1ses-419!2sbo!4v1759754002390!5m2!1ses-419!2sbo"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+
+
+  <footer>
+    <p>© 2025 Consultorio Médico Privado. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script del menú -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Cerrar el menú al tocar fuera
+    document.addEventListener('click', (event) => {
+      if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

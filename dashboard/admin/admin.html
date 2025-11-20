@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>Administrador</h2>
+    <a href="#" class="nav-link" data-page="users">Usuarios</a>
+    <a href="#" class="nav-link" data-page="reports">Reportes</a>
+    <a href="#" class="nav-link" data-page="settings">Configuración</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="main" id="main">
+    <div class="welcome" id="welcome">Bienvenido Administrador</div>
+    <div id="content">
+      <p>Selecciona una opción del menú para ver los datos.</p>
+    </div>
+  </div>
+
+  <!-- Firebase -->
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
