@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Redirigir según el rol
       if (rol === "admin") {
-        window.location.href = "../Dashboard/admin/admin.html";
+        window.location.href = "../Dashboard/admin/index.html";
       } else if (rol === "medico") {
-        window.location.href = "../Dashboard/medico/medico.html";
+        window.location.href = "../Dashboard/medico/index.html";
       } else {
-        window.location.href = "../Dashboard/pacientes/paciente.html";
+        window.location.href = "../Dashboard/pacientes/index.html";
       }
 
     } catch (error) {
