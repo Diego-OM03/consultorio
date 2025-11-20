@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Redirigir según el rol
       if (rol === "admin") {
-        window.location.href = "../dashboard/admin/admin.html";
+        window.location.href = "../dashboard/admin/index.html";
       } else if (rol === "medico") {
-        window.location.href = "../dashboard/medico/medico.html";
+        window.location.href = "../dashboard/medico/index.html";
       } else {
-        window.location.href = "../dashboard/pacientes/paciente.html";
+        window.location.href = "../dashboard/pacientes/index.html";
       }
 
     } catch (error) {
@@ -121,11 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Redirigir según el rol
       if (rol === "admin") {
-        window.location.href = "../dashboard/admin/admin.html";
+        window.location.href = "../dashboard/admin/index.html";
       } else if (rol === "medico") {
-        window.location.href = "../dashboard/medico/medico.html";
+        window.location.href = "../dashboard/medico/index.html";
       } else {
-        window.location.href = "../dashboard/pacientes/paciente.html";
+        window.location.href = "../dashboard/pacientes/index.html";
       }
 
     } catch (error) {
